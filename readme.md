@@ -80,3 +80,12 @@ v
 | Applications |
 +-----------------+
 ```
+
+**7. How to run:**
+
+- **Dependencies:** install dependencies using 
+``` pip install -r requirements.txt
+```
+- **Auth:** Please use your own Service Account on GCP
+
+- **Vertex AI Endpoints:** Trained Random Forest Regressor model is deployed to Vertex AI Endpoints for real-time prediction serving. This deployment option provides a scalable and managed environment for making sales predictions on new, unseen data.
