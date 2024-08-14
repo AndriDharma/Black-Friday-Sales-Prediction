@@ -84,8 +84,18 @@ v
 **7. How to run:**
 
 - **Dependencies:** install dependencies using 
-``` pip install -r requirements.txt
-```
+``` pip install -r requirements.txt ```
+
 - **Auth:** Please use your own Service Account on GCP
+
+- **Run the Pipeline**
+
+    - **Run all the kubeflow notebook code with this additional information:**
+    -   **PROJECT_ID**: Google Cloud project id.
+    -   **display_name**: The name displayed in the AI Platform for this pipeline job.
+    -   **template_path**: The path to the pipeline YAML file which defines the structure and components of the pipeline.
+    -   **PIPELINE_ROOT**: The root directory in Google Cloud Storage where the pipeline artifacts will be stored.
+    -   **enable_caching**: A boolean flag to disable caching of pipeline steps to ensure the pipeline runs from scratch each time.
+    -   **config.yaml**: A config file for customizing your pipeline, in this case just adding project id, region, and model name.
 
 - **Vertex AI Endpoints:** Trained Random Forest Regressor model is deployed to Vertex AI Endpoints for real-time prediction serving. This deployment option provides a scalable and managed environment for making sales predictions on new, unseen data.
